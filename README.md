@@ -45,7 +45,6 @@ vasu = {
                      "Docker", "C++", "CUDA"],
 }
 ```
-```
 
 ---
 
@@ -57,15 +56,18 @@ vasu = {
 | [📡 LiDAR-Camera Depth Fusion](https://github.com/VasuTammisetti/LiDAR_Camera-MiDAS-_Fusion_For-Better_Deapth-Map) | Dense metric depth via MiDaS + LiDAR median scaling | MiDaS · OpenCV · KITTI |
 | [🚦 Meta-YOLOv8 Traffic Detection](https://github.com/VasuTammisetti/Meta-Learning-Enhanced-YOLOv8-for-Precision-Traffic-Light-Color-Detection-in-ADAS) | Meta-learning enhanced YOLOv8 for ADAS traffic light detection | Meta-Learning · YOLOv8 · ADAS |
 | [🤖 ROS2 Docker CV](https://github.com/VasuTammisetti/ROS2_Docker_CV) | Containerised computer vision pipeline in ROS2 | ROS2 · Docker · CV |
+| [⚙️ Meta ML Deployment](https://github.com/VasuTammisetti/Meta_ML_model_deployment_using_pycaret) | Meta-learning model deployment pipeline using PyCaret | PyCaret · MLOps · Python |
+| [🧠 Python AI Agent](https://github.com/VasuTammisetti/PythonAIAgent) | Agentic AI pipeline in Python | LangChain · RAG · Python |
 
 ---
 
 ## 🧠 Research Highlights
 
-- 🏆 **Industry-first** explicit brake/signal light classifier — **89% mAP** on MFN100 NPU
-- 📉 Stereo depth estimation reducing **LiDAR dependency costs** in production vehicles
+- 🏆 **Industry-first** explicit brake/signal light classifier — **89% mAP** on Infineon MFN100 NPU
+- 📉 Stereo depth estimation pipeline reducing **LiDAR hardware costs** in production ADAS vehicles
 - 🔬 **3 peer-reviewed publications** in ADAS perception and meta-learning
-- 🤝 Industry collaborations: **Continental** · **TTTech** · **Infineon**
+- 🤝 Industry collaborations: **Continental** · **TTTech** · **Infineon Technologies AG**
+- 📡 Hands-on experience with **XENSIV™ radar** (BGT60TR13C, BGT60ATR24C) and **REAL3™ LiDAR** (IRS2381C, IRS2875C)
 
 ---
 
@@ -74,19 +76,23 @@ vasu = {
 <table>
 <tr>
 <td><b>ML / DL</b></td>
-<td>PyTorch · TensorRT · ONNX · YOLOv8–v11 · DINOv2 · Meta-DETR</td>
+<td>PyTorch · TensorRT · ONNX · YOLOv8–v11 · DINOv2 · Meta-DETR · PointPillars</td>
 </tr>
 <tr>
 <td><b>Sensor Fusion</b></td>
-<td>LiDAR · Camera · Radar · Kalman Filter · PointPillars</td>
+<td>REAL3™ LiDAR · XENSIV™ Radar · Camera · Kalman Filter · Late Fusion</td>
+</tr>
+<tr>
+<td><b>Edge Hardware</b></td>
+<td>MFN100 NPU · AURIX™ TC4x · TRAVEO™ T2G · TensorRT Quantisation</td>
 </tr>
 <tr>
 <td><b>MLOps</b></td>
 <td>Docker · Kubernetes · MLflow · AWS SageMaker · GCP GKE</td>
 </tr>
 <tr>
-<td><b>Robotics</b></td>
-<td>ROS2 · LangGraph · LangChain · RAG · Agentic AI</td>
+<td><b>Robotics / Agents</b></td>
+<td>ROS2 · LangGraph · LangChain · RAG · Agentic AI Frameworks</td>
 </tr>
 <tr>
 <td><b>Languages</b></td>
@@ -96,6 +102,8 @@ vasu = {
 
 ---
 
+## 📊 GitHub Stats
+
 <div align="center">
 
 <img src="https://github-readme-stats.vercel.app/api?username=VasuTammisetti&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="150"/>
@@ -103,12 +111,33 @@ vasu = {
 
 </div>
 
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=VasuTammisetti&theme=tokyo-night&hide_border=true&area=true" width="100%"/>
+
+</div>
+
+---
+
+## 📫 Connect
+
+<div align="center">
+
+<a href="https://www.linkedin.com/in/vasutammisetti">
+  <img src="https://img.shields.io/badge/LinkedIn-Vasu_Tammisetti-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+<a href="https://zenodo.org/records/19111017">
+  <img src="https://img.shields.io/badge/Zenodo-Dataset-024dad?style=for-the-badge&logo=zenodo&logoColor=white"/>
+</a>
+
+</div>
+
 ---
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6e40c9,50:1a1a2e,100:0d1117&height=100&section=footer" width="100%"/>
+*💼 Open to ML Engineering · ADAS Perception · Sensor Fusion · Computer Vision roles*
 
-*Open to ML Engineering · ADAS · Sensor Fusion · Computer Vision roles*
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6e40c9,50:1a1a2e,100:0d1117&height=100&section=footer" width="100%"/>
 
 </div>
