@@ -35,8 +35,16 @@ vasu = {
                      "Meta-Learning", "ADAS", "Edge AI"],
     "models"      : ["Meta-YOLO v8–v11", "PointPillars",
                      "Meta-DETR", "DINOv2"],
-    "hardware"    : "Infineon MFN100 NPU",
+    "sensors"     : {
+        "radar"  : "Infineon XENSIV™ BGT60TR13C · BGT60ATR24C",
+        "lidar"  : "Infineon REAL3™ IRS2381C · IRS2875C",
+        "camera" : "Stereo · Monocular · Semantic Segmentation",
+    },
+    "hardware"    : "Infineon MFN100 NPU · AURIX™ TC4x",
+    "stack"       : ["PyTorch", "TensorRT", "ONNX", "ROS2",
+                     "Docker", "C++", "CUDA"],
 }
+```
 ```
 
 ---
