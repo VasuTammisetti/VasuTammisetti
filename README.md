@@ -16,6 +16,8 @@
   <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
   <img src="https://img.shields.io/badge/YOLOv8-00FFAA?style=flat-square&logo=yolo&logoColor=black"/>
   <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white"/>
+  <img src="https://img.shields.io/badge/TensorRT-76B900?style=flat-square&logo=nvidia&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white"/>
   <img src="https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazonaws&logoColor=white"/>
 </p>
 
@@ -23,86 +25,120 @@
 
 ---
 
-## 👋 About Me
-```python
-vasu = {
-    "role"        : "AI Research Engineer & Doctoral Researcher",
-    "company"     : "Infineon Technologies AG — Munich, Germany",
-    "phd"         : "Meta-Learning for ADAS Perception @ Univ. of Granada",
-    "experience"  : "8+ years in AI/ML",
-    "publications": 3,
-    "focus"       : ["Sensor Fusion", "3D Object Detection",
-                     "Meta-Learning", "ADAS", "Edge AI"],
-    "models"      : ["Meta-YOLO v8–v11", "PointPillars",
-                     "Meta-DETR", "DINOv2"],
-    "sensors"     : {
-        "radar"  : "Infineon XENSIV™ BGT60TR13C · BGT60ATR24C",
-        "lidar"  : "Infineon REAL3™ IRS2381C · IRS2875C",
-        "camera" : "Stereo · Monocular · Semantic Segmentation",
-    },
-    "hardware"    : "Infineon MFN100 NPU · AURIX™ TC4x",
-    "stack"       : ["PyTorch", "TensorRT", "ONNX", "ROS2",
-                     "Docker", "C++", "CUDA"],
-}
-```
+## About Me
+
+| | |
+|:---|:---|
+| **Role** | AI Research Engineer & Doctoral Researcher |
+| **Company** | Infineon Technologies AG, Munich, Germany |
+| **PhD** | Meta-Learning for ADAS Perception @ University of Granada |
+| **Experience** | 8+ years in AI/ML & Computer Vision |
+| **Publications** | 3 peer-reviewed (MDPI Applied Sciences & Electronics, 2024) |
+| **Focus** | Sensor Fusion, 3D Detection, Meta-Learning, ADAS, Edge AI, VLMs |
+| **Models** | Meta-YOLO v8-v11, PointPillars, LLaVA, Meta-DETR, DINOv2, BEVFusion |
+| **Sensors** | XENSIV Radar (BGT60TR13C, BGT60ATR24C), REAL3 LiDAR (IRS2381C, IRS2875C) |
+| **Hardware** | MFN100 NPU, AURIX TC4x, NVIDIA Jetson |
+| **Stack** | PyTorch, TensorRT, ONNX, ROS2, Docker, Jenkins, C++, CUDA |
 
 ---
 
-## 🚀 Featured Projects
+## Currently Working On
 
-| Project | Description | Stack |
-|---------|-------------|-------|
-| [🔀 Multi-Modal 3D Detection](https://github.com/VasuTammisetti/Multi-Modal_3D_Object_Detection_from_KITTI_Augmenting_LiDAR_with_Camera_Semantics) | LiDAR + Camera late fusion for 3D object detection on KITTI | YOLOv8 · PointPillars · PyTorch |
-| [📡 LiDAR-Camera Depth Fusion](https://github.com/VasuTammisetti/LiDAR_Camera-MiDAS-_Fusion_For-Better_Deapth-Map) | Dense metric depth via MiDaS + LiDAR median scaling | MiDaS · OpenCV · KITTI |
-| [🚦 Meta-YOLOv8 Traffic Detection](https://github.com/VasuTammisetti/Meta-Learning-Enhanced-YOLOv8-for-Precision-Traffic-Light-Color-Detection-in-ADAS) | Meta-learning enhanced YOLOv8 for ADAS traffic light detection | Meta-Learning · YOLOv8 · ADAS |
-| [🤖 ROS2 Docker CV](https://github.com/VasuTammisetti/ROS2_Docker_CV) | Containerised computer vision pipeline in ROS2 | ROS2 · Docker · CV |
-| [⚙️ Meta ML Deployment](https://github.com/VasuTammisetti/Meta_ML_model_deployment_using_pycaret) | Meta-learning model deployment pipeline using PyCaret | PyCaret · MLOps · Python |
-| [🧠 Python AI Agent](https://github.com/VasuTammisetti/PythonAIAgent) | Agentic AI pipeline in Python | LangChain · RAG · Python |
+- VLM-based ADAS Perception -- Zero-shot driving scene understanding using LLaVA with Camera-LiDAR fusion
+- PhD Dissertation -- Meta-Learning for Adaptive ADAS Perception (University of Granada, defense 2026)
+- Sensor Fusion Research -- Camera-Radar-LiDAR fusion for robust 3D object detection
 
 ---
 
-## 🧠 Research Highlights
+## Featured Projects
 
-- 🏆 **Industry-first** explicit brake/signal light classifier — **89% mAP** on Infineon MFN100 NPU
-- 📉 Stereo depth estimation pipeline reducing **LiDAR hardware costs** in production ADAS vehicles
-- 🔬 **3 peer-reviewed publications** in ADAS perception and meta-learning
-- 🤝 Industry collaborations: **Continental** · **TTTech** · **Infineon Technologies AG**
-- 📡 Hands-on experience with **XENSIV™ radar** (BGT60TR13C, BGT60ATR24C) and **REAL3™ LiDAR** (IRS2381C, IRS2875C)
+| | Project | What It Does | Key Results |
+|:---:|---------|-------------|-------------|
+| 1 | [**VLM-LiDAR-Camera ADAS**](https://github.com/VasuTammisetti/VLM-LiDAR-Camera-ADAS-perception) | Zero-shot scene understanding using LLaVA with Camera-LiDAR depth fusion on KITTI | Zero annotations, 4-bit quantized, Docker + Jenkins CI/CD |
+| 2 | [**Multi-Modal 3D Detection**](https://github.com/VasuTammisetti/Multi-Modal_3D_Object_Detection_from_KITTI_Augmenting_LiDAR_with_Camera_Semantics) | LiDAR + Camera late fusion for 3D object detection with BEV visualization | YOLOv8 + PointPillars, Pure PyTorch, KITTI benchmark |
+| 3 | [**LiDAR-Camera Depth Fusion**](https://github.com/VasuTammisetti/LiDAR_Camera-MiDAS-_Fusion_For-Better_Deapth-Map) | Dense metric depth via MiDaS + LiDAR median scaling | Sparse-to-dense, Metric-accurate, Real-time |
+| 4 | [**Meta-YOLOv8 Traffic Detection**](https://github.com/VasuTammisetti/Meta-Learning-Enhanced-YOLOv8-for-Precision-Traffic-Light-Color-Detection-in-ADAS) | Meta-learning enhanced YOLOv8 for traffic light detection | 89% mAP, Few-shot adaptive, Published research |
+| 5 | [**ROS2 Docker CV**](https://github.com/VasuTammisetti/ROS2_Docker_CV) | Containerized computer vision pipeline in ROS2 | Production-ready, Docker orchestrated |
+| 6 | [**Meta ML Deployment**](https://github.com/VasuTammisetti/Meta_ML_model_deployment_using_pycaret) | Meta-learning model deployment pipeline using PyCaret | AutoML, End-to-end MLOps |
+| 7 | [**Python AI Agent**](https://github.com/VasuTammisetti/PythonAIAgent) | Agentic AI pipeline with LangChain and RAG | LangChain, RAG, Autonomous agents |
 
 ---
 
-## 🛠️ Tech Stack
+## Research Highlights
+
+<table>
+<tr>
+<td width="50%">
+
+### Key Achievements
+
+- **VLM for ADAS (NEW)** -- Built a zero-shot perception system using Vision Language Models (LLaVA) that analyzes driving scenes with Camera-LiDAR fusion, eliminating the need for costly annotation pipelines. This bridges the gap between foundation models and safety-critical autonomous driving, enabling scene understanding, hazard detection, and driving recommendations without any task-specific training.
+- **Industry-first** brake/signal classifier -- **89% mAP** on MFN100 NPU
+- **95% stereo depth accuracy** at 5-50m range at 30 FPS
+- **40% tracking robustness** improvement via meta-learning
+- **85% deployment time reduction** in production pipelines
+- **Sub-50ms** end-to-end latency on edge hardware
+
+</td>
+<td width="50%">
+
+### Why VLMs for ADAS Matter
+
+Traditional ADAS perception requires thousands of annotated images per object class and weeks of model training. Vision Language Models change this paradigm:
+
+- **Zero-shot capability** -- Understands new driving scenarios without retraining
+- **Natural language output** -- Produces human-readable scene descriptions instead of just bounding boxes
+- **Multi-task in one model** -- Object detection, hazard assessment, and driving recommendations from a single forward pass
+- **Annotation-free** -- Eliminates the most expensive bottleneck in ADAS development
+- **Foundation model leverage** -- Builds on billions of parameters pre-trained on diverse visual knowledge
+
+This represents the future direction of perception systems in autonomous driving, where foundation models complement traditional detection pipelines for richer situational awareness.
+
+</td>
+</tr>
+</table>
+
+### Publications & Industry Collaboration
+
+- **3 peer-reviewed papers** in ADAS perception and meta-learning (MDPI Applied Sciences & Electronics, 2024)
+- Production ADAS validation with **Continental** & **TTTech**
+- Hands-on with **XENSIV Radar** (BGT60TR13C, BGT60ATR24C) and **REAL3 LiDAR** (IRS2381C, IRS2875C)
+- Edge deployment on **MFN100 NPU** and **AURIX TC4x**
+
+---
+
+## Tech Stack
 
 <table>
 <tr>
 <td><b>ML / DL</b></td>
-<td>PyTorch · TensorRT · ONNX · YOLOv8–v11 · DINOv2 · Meta-DETR · PointPillars</td>
+<td>PyTorch, TensorRT, ONNX, YOLOv8-v11, LLaVA, DINOv2, Meta-DETR, PointPillars, BEVFusion</td>
 </tr>
 <tr>
 <td><b>Sensor Fusion</b></td>
-<td>REAL3™ LiDAR · XENSIV™ Radar · Camera · Kalman Filter · Late Fusion</td>
+<td>REAL3 LiDAR, XENSIV Radar, Stereo Camera, Kalman Filter, Late/Early Fusion, BEV</td>
 </tr>
 <tr>
-<td><b>Edge Hardware</b></td>
-<td>MFN100 NPU · AURIX™ TC4x · TRAVEO™ T2G · TensorRT Quantisation</td>
+<td><b>Edge / Hardware</b></td>
+<td>MFN100 NPU, AURIX TC4x, NVIDIA Jetson, INT8/FP16 Quantization, TensorRT</td>
 </tr>
 <tr>
-<td><b>MLOps</b></td>
-<td>Docker · Kubernetes · MLflow · AWS SageMaker · GCP GKE</td>
+<td><b>MLOps / DevOps</b></td>
+<td>Docker, Jenkins, Kubernetes, MLflow, AWS SageMaker, GCP GKE</td>
 </tr>
 <tr>
-<td><b>Robotics / Agents</b></td>
-<td>ROS2 · LangGraph · LangChain · RAG · Agentic AI Frameworks</td>
+<td><b>Robotics / AI</b></td>
+<td>ROS2, LangGraph, LangChain, RAG, Agentic AI Frameworks</td>
 </tr>
 <tr>
 <td><b>Languages</b></td>
-<td>Python · C++ · CUDA</td>
+<td>Python, C++, CUDA, Bash</td>
 </tr>
 </table>
 
 ---
 
-## 📊 GitHub Stats
+## GitHub Stats
 
 <div align="center">
 
@@ -119,7 +155,7 @@ vasu = {
 
 ---
 
-## 📫 Connect
+## Connect
 
 <div align="center">
 
@@ -136,7 +172,7 @@ vasu = {
 
 <div align="center">
 
-*💼 Open to ML Engineering · ADAS Perception · Sensor Fusion · Computer Vision roles*
+*Open to ML Engineering, ADAS Perception, Sensor Fusion, Computer Vision, and Robotics roles in Germany *
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:6e40c9,50:1a1a2e,100:0d1117&height=100&section=footer" width="100%"/>
 
