@@ -142,8 +142,14 @@ This represents the future direction of perception systems in autonomous driving
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=VasuTammisetti&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="150"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=VasuTammisetti&layout=compact&theme=tokyonight&hide_border=true" height="150"/>
+<img src="https://streak-stats.demolab.com/?user=VasuTammisetti&theme=tokyonight&hide_border=true" height="150"/>
+
+<p>
+  <img src="https://img.shields.io/github/stars/VasuTammisetti?style=for-the-badge&logo=github&logoColor=white&label=Total%20Stars&color=1a1b27"/>
+  <img src="https://img.shields.io/github/followers/VasuTammisetti?style=for-the-badge&logo=github&logoColor=white&label=Followers&color=1a1b27"/>
+  <img src="https://img.shields.io/badge/Public%20Repos-7+-70a5fd?style=for-the-badge&logo=github&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Languages-Python%20%7C%20C++%20%7C%20Jupyter-bf91f3?style=for-the-badge&logo=github&logoColor=white"/>
+</p>
 
 </div>
 
