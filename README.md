@@ -37,7 +37,7 @@
 | **Focus** | Sensor Fusion, 3D Detection, Meta-Learning, ADAS, Edge AI, VLMs |
 | **Models** | Meta-YOLO v8-v11, PointPillars, LLaVA, Meta-DETR, DINOv2, BEVFusion |
 | **Sensors** | XENSIV Radar (BGT60TR13C, BGT60ATR24C), REAL3 LiDAR (IRS2381C, IRS2875C) |
-| **Hardware** | MFN100 NPU, AURIX TC4x, NVIDIA Jetson |
+| **Hardware** | MFN100 NPU, NVIDIA Jetson |
 | **Stack** | PyTorch, TensorRT, ONNX, ROS2, Docker, Jenkins, C++, CUDA |
 
 ---
