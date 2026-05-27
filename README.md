@@ -45,7 +45,6 @@
 ## Currently Working On
 
 - VLM-based ADAS Perception -- Zero-shot driving scene understanding using LLaVA with Camera-LiDAR fusion
-- PhD Dissertation -- Meta-Learning for Adaptive ADAS Perception (University of Granada, defense 2026)
 - Sensor Fusion Research -- Camera-Radar-LiDAR fusion for robust 3D object detection
 
 ---
