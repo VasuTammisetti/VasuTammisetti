@@ -175,10 +175,4 @@ This represents the future direction of perception systems in autonomous driving
 
 ---
 
-<div align="center">
 
-*Open to Computer Vision, ML Engineering, ADAS Perception, Sensor Fusion, and Robotics roles in Germany *
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6e40c9,50:1a1a2e,100:0d1117&height=100&section=footer" width="100%"/>
-
-</div>
