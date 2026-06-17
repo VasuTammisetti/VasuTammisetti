@@ -34,8 +34,8 @@
 | **PhD** | Meta-Learning for ADAS Perception @ University of Granada |
 | **Experience** | 8+ years in AI/ML & Computer Vision |
 | **Publications** | 3 peer-reviewed (MDPI Applied Sciences & Electronics, 2024) |
-| **Focus** | Sensor Fusion, 3D Detection, Meta-Learning, ADAS, Edge AI, VLMs |
-| **Models** | Meta-YOLO v8-v11, PointPillars, LLaVA, Meta-DETR, DINOv2, BEVFusion |
+| **Focus** | Sensor Fusion, 3D Detection, Meta-Learning, ADAS, Edge AI, VLMs, Vision-Language-Action (VLA) |
+| **Models** | Meta-YOLO v8-v11, PointPillars, LLaVA, SigLIP, Meta-DETR, DINOv2, BEVFusion |
 | **Sensors** | XENSIV Radar (BGT60TR13C, BGT60ATR24C), REAL3 LiDAR (IRS2381C, IRS2875C) |
 | **Hardware** | MFN100 NPU, NVIDIA Jetson |
 | **Stack** | PyTorch, TensorRT, ONNX, ROS2, Docker, Jenkins, C++, CUDA |
@@ -44,6 +44,7 @@
 
 ## Currently Working On
 
+- Chain-of-Thought VLA for Driving -- A "reason-before-act" agent that detects objects in 3D, reasons in language about *why* to act, then predicts the actual driving trajectory and longitudinal control (nuScenes)
 - VLM-based ADAS Perception -- Zero-shot driving scene understanding using LLaVA with Camera-LiDAR fusion
 - Sensor Fusion Research -- Camera-Radar-LiDAR fusion for robust 3D object detection
 
@@ -53,13 +54,29 @@
 
 | | Project | What It Does | Key Results |
 |:---:|---------|-------------|-------------|
-| 1 | [**VLM-LiDAR-Camera ADAS**](https://github.com/VasuTammisetti/VLM-LiDAR-Camera-ADAS-perception) | Zero-shot scene understanding using LLaVA with Camera-LiDAR depth fusion on KITTI | Zero annotations, 4-bit quantized, Docker + Jenkins CI/CD |
-| 2 | [**Multi-Modal 3D Detection**](https://github.com/VasuTammisetti/Multi-Modal_3D_Object_Detection_from_KITTI_Augmenting_LiDAR_with_Camera_Semantics) | LiDAR + Camera late fusion for 3D object detection with BEV visualization | YOLOv8 + PointPillars, Pure PyTorch, KITTI benchmark |
-| 3 | [**LiDAR-Camera Depth Fusion**](https://github.com/VasuTammisetti/LiDAR_Camera-MiDAS-_Fusion_For-Better_Deapth-Map) | Dense metric depth via MiDaS + LiDAR median scaling | Sparse-to-dense, Metric-accurate, Real-time |
-| 4 | [**Meta-YOLOv8 Traffic Detection**](https://github.com/VasuTammisetti/Meta-Learning-Enhanced-YOLOv8-for-Precision-Traffic-Light-Color-Detection-in-ADAS) | Meta-learning enhanced YOLOv8 for traffic light detection | 89% mAP, Few-shot adaptive, Published research |
-| 5 | [**ROS2 Docker CV**](https://github.com/VasuTammisetti/ROS2_Docker_CV) | Containerized computer vision pipeline in ROS2 | Production-ready, Docker orchestrated |
-| 6 | [**Meta ML Deployment**](https://github.com/VasuTammisetti/Meta_ML_model_deployment_using_pycaret) | Meta-learning model deployment pipeline using PyCaret | AutoML, End-to-end MLOps |
-| 7 | [**Python AI Agent**](https://github.com/VasuTammisetti/PythonAIAgent) | Agentic AI pipeline with LangChain and RAG | LangChain, RAG, Autonomous agents |
+| 1 | [**CoT-VLA -- Chain-of-Thought VLA**](https://github.com/VasuTammisetti/CoT-Chain-of-thought-_VLA_ADAS) | Reason-before-act driving agent on nuScenes: 3D detection -> LLaVA chain-of-thought reasoning -> trained trajectory head -> safety & longitudinal control scoring | Trajectory ADE ~2.9m, ~82% steering accuracy, LLaVA-1.6 4-bit + SigLIP action head |
+| 2 | [**VLM-LiDAR-Camera ADAS**](https://github.com/VasuTammisetti/VLM-LiDAR-Camera-ADAS-perception) | Zero-shot scene understanding using LLaVA with Camera-LiDAR depth fusion on KITTI | Zero annotations, 4-bit quantized, Docker + Jenkins CI/CD |
+| 3 | [**Multi-Modal 3D Detection**](https://github.com/VasuTammisetti/Multi-Modal_3D_Object_Detection_from_KITTI_Augmenting_LiDAR_with_Camera_Semantics) | LiDAR + Camera late fusion for 3D object detection with BEV visualization | YOLOv8 + PointPillars, Pure PyTorch, KITTI benchmark |
+| 4 | [**LiDAR-Camera Depth Fusion**](https://github.com/VasuTammisetti/LiDAR_Camera-MiDAS-_Fusion_For-Better_Deapth-Map) | Dense metric depth via MiDaS + LiDAR median scaling | Sparse-to-dense, Metric-accurate, Real-time |
+| 5 | [**Meta-YOLOv8 Traffic Detection**](https://github.com/VasuTammisetti/Meta-Learning-Enhanced-YOLOv8-for-Precision-Traffic-Light-Color-Detection-in-ADAS) | Meta-learning enhanced YOLOv8 for traffic light detection | 89% mAP, Few-shot adaptive, Published research |
+| 6 | [**ROS2 Docker CV**](https://github.com/VasuTammisetti/ROS2_Docker_CV) | Containerized computer vision pipeline in ROS2 | Production-ready, Docker orchestrated |
+| 7 | [**Meta ML Deployment**](https://github.com/VasuTammisetti/Meta_ML_model_deployment_using_pycaret) | Meta-learning model deployment pipeline using PyCaret | AutoML, End-to-end MLOps |
+| 8 | [**Python AI Agent**](https://github.com/VasuTammisetti/PythonAIAgent) | Agentic AI pipeline with LangChain and RAG | LangChain, RAG, Autonomous agents |
+
+---
+
+## Spotlight: Chain-of-Thought VLA for Autonomous Driving
+
+A compact autonomous-driving agent that **reasons before it acts**. For each front-camera keyframe it detects surrounding objects in 3D, asks a vision-language model *why* it should do something, predicts the actual driving trajectory with a trained action head, and scores the safety and longitudinal control of the decision -- the full **perceive -> reason -> act -> assess** loop, end to end.
+
+| Stage | Component | Output |
+|-------|-----------|--------|
+| **Perceive** | nuScenes ground-truth 3D boxes | objects with class + metric distance |
+| **Reason** | LLaVA-1.6-Mistral-7B (4-bit) | chain-of-thought: what it sees and why |
+| **Act** | SigLIP + cross-attention head (trained) | 9-waypoint trajectory + speed + steering |
+| **Assess** | safety score + kinematics | risk 0-100, TTC, deceleration, EV regen level |
+
+The split is deliberate: LLaVA reasons in language but is unreliable at numeric waypoints, so a trained head owns the geometry while LLaVA owns the explanation. Evaluated on the held-out nuScenes-mini test scenes, the trajectory head reaches **~2.9m ADE** over a 4.5s horizon against the car's real recorded path, with **~82%** chain-of-thought steering agreement and an average safety score of **~70/100**. These are honest small-data numbers -- the value is the complete, explainable pipeline rather than state-of-the-art scale.
 
 ---
 
@@ -71,7 +88,8 @@
 
 ### Key Achievements
 
-- **VLM for ADAS (NEW)** -- Built a zero-shot perception system using Vision Language Models (LLaVA) that analyzes driving scenes with Camera-LiDAR fusion, eliminating the need for costly annotation pipelines. This bridges the gap between foundation models and safety-critical autonomous driving, enabling scene understanding, hazard detection, and driving recommendations without any task-specific training.
+- **Chain-of-Thought VLA (NEW)** -- Built a reason-before-act driving agent on nuScenes that pairs LLaVA chain-of-thought reasoning with a trained SigLIP action head, outputting real driving trajectories, steering and longitudinal control (not just bounding boxes). ~2.9m trajectory ADE and ~82% steering agreement on held-out scenes.
+- **VLM for ADAS** -- Built a zero-shot perception system using Vision Language Models (LLaVA) that analyzes driving scenes with Camera-LiDAR fusion, eliminating the need for costly annotation pipelines. This bridges the gap between foundation models and safety-critical autonomous driving, enabling scene understanding, hazard detection, and driving recommendations without any task-specific training.
 - **Industry-first** brake/signal classifier -- **89% mAP** on MFN100 NPU
 - **95% stereo depth accuracy** at 5-50m range at 30 FPS
 - **40% tracking robustness** improvement via meta-learning
@@ -81,17 +99,18 @@
 </td>
 <td width="50%">
 
-### Why VLMs for ADAS Matter
+### Why VLMs & VLAs for ADAS Matter
 
-Traditional ADAS perception requires thousands of annotated images per object class and weeks of model training. Vision Language Models change this paradigm:
+Traditional ADAS perception requires thousands of annotated images per object class and weeks of model training. Vision Language Models -- and the Vision-Language-Action models built on top of them -- change this paradigm:
 
 - **Zero-shot capability** -- Understands new driving scenarios without retraining
+- **Reasoning, not just detection** -- VLA models explain *why* an action is chosen, then output the action itself (trajectory, steering, control)
 - **Natural language output** -- Produces human-readable scene descriptions instead of just bounding boxes
-- **Multi-task in one model** -- Object detection, hazard assessment, and driving recommendations from a single forward pass
-- **Annotation-free** -- Eliminates the most expensive bottleneck in ADAS development
+- **Multi-task in one loop** -- Object detection, hazard assessment, planning and control from one pipeline
+- **Annotation-free perception** -- Eliminates the most expensive bottleneck in ADAS development
 - **Foundation model leverage** -- Builds on billions of parameters pre-trained on diverse visual knowledge
 
-This represents the future direction of perception systems in autonomous driving, where foundation models complement traditional detection pipelines for richer situational awareness.
+This represents the future direction of perception and planning in autonomous driving, where foundation models complement traditional detection pipelines for richer situational awareness and explainable decisions.
 
 </td>
 </tr>
@@ -111,11 +130,19 @@ This represents the future direction of perception systems in autonomous driving
 <table>
 <tr>
 <td><b>ML / DL</b></td>
-<td>PyTorch, TensorRT, ONNX, YOLOv8-v11, LLaVA, DINOv2, Meta-DETR, PointPillars, BEVFusion</td>
+<td>PyTorch, TensorRT, ONNX, YOLOv8-v11, LLaVA, SigLIP, Sentence-BERT, DINOv2, Meta-DETR, PointPillars, BEVFusion</td>
+</tr>
+<tr>
+<td><b>VLM / VLA</b></td>
+<td>LLaVA-1.6, Chain-of-Thought reasoning, cross-attention action heads, 4-bit quantization, zero-shot scene understanding</td>
 </tr>
 <tr>
 <td><b>Sensor Fusion</b></td>
 <td>REAL3 LiDAR, XENSIV Radar, Stereo Camera, Kalman Filter, Late/Early Fusion, BEV</td>
+</tr>
+<tr>
+<td><b>Datasets</b></td>
+<td>KITTI, nuScenes</td>
 </tr>
 <tr>
 <td><b>Edge / Hardware</b></td>
@@ -146,7 +173,7 @@ This represents the future direction of perception systems in autonomous driving
 <p>
   <img src="https://img.shields.io/github/stars/VasuTammisetti?style=for-the-badge&logo=github&logoColor=white&label=Total%20Stars&color=1a1b27"/>
   <img src="https://img.shields.io/github/followers/VasuTammisetti?style=for-the-badge&logo=github&logoColor=white&label=Followers&color=1a1b27"/>
-  <img src="https://img.shields.io/badge/Public%20Repos-7+-70a5fd?style=for-the-badge&logo=github&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Public%20Repos-8+-70a5fd?style=for-the-badge&logo=github&logoColor=white"/>
   <img src="https://img.shields.io/badge/Languages-Python%20%7C%20C++%20%7C%20Jupyter-bf91f3?style=for-the-badge&logo=github&logoColor=white"/>
 </p>
 
@@ -174,5 +201,3 @@ This represents the future direction of perception systems in autonomous driving
 </div>
 
 ---
-
-
