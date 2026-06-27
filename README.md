@@ -51,19 +51,17 @@
 ---
 
 ## Featured Projects
-
 | | Project | What It Does | Key Results |
 |:---:|---------|-------------|-------------|
-| 1 | [**CoT-VLA -- Chain-of-Thought VLA**](https://github.com/VasuTammisetti/CoT-Chain-of-thought-_VLA_ADAS) | Reason-before-act driving agent on nuScenes: 3D detection -> LLaVA chain-of-thought reasoning -> trained trajectory head -> safety & longitudinal control scoring | Trajectory ADE ~2.9m, ~82% steering accuracy, LLaVA-1.6 4-bit + SigLIP action head |
-| 2 | [**VLM-LiDAR-Camera ADAS**](https://github.com/VasuTammisetti/VLM-LiDAR-Camera-ADAS-perception) | Zero-shot scene understanding using LLaVA with Camera-LiDAR depth fusion on KITTI | Zero annotations, 4-bit quantized, Docker + Jenkins CI/CD |
-| 3 | [**Multi-Modal 3D Detection**](https://github.com/VasuTammisetti/Multi-Modal_3D_Object_Detection_from_KITTI_Augmenting_LiDAR_with_Camera_Semantics) | LiDAR + Camera late fusion for 3D object detection with BEV visualization | YOLOv8 + PointPillars, Pure PyTorch, KITTI benchmark |
-| 4 | [**LiDAR-Camera Depth Fusion**](https://github.com/VasuTammisetti/LiDAR_Camera-MiDAS-_Fusion_For-Better_Deapth-Map) | Dense metric depth via MiDaS + LiDAR median scaling | Sparse-to-dense, Metric-accurate, Real-time |
-| 5 | [**Meta-YOLOv8 Traffic Detection**](https://github.com/VasuTammisetti/Meta-Learning-Enhanced-YOLOv8-for-Precision-Traffic-Light-Color-Detection-in-ADAS) | Meta-learning enhanced YOLOv8 for traffic light detection | 89% mAP, Few-shot adaptive, Published research |
-| 6 | [**ROS2 Docker CV**](https://github.com/VasuTammisetti/ROS2_Docker_CV) | Containerized computer vision pipeline in ROS2 | Production-ready, Docker orchestrated |
-| 7 | [**Meta ML Deployment**](https://github.com/VasuTammisetti/Meta_ML_model_deployment_using_pycaret) | Meta-learning model deployment pipeline using PyCaret | AutoML, End-to-end MLOps |
-| 8 | [**Python AI Agent**](https://github.com/VasuTammisetti/PythonAIAgent) | Agentic AI pipeline with LangChain and RAG | LangChain, RAG, Autonomous agents |
-
----
+| 1 | [**BEV Map Fusion -- Camera·LiDAR·HD-Map**](https://github.com/VasuTammisetti/BEV-map-fusion) | Fuses 6 surround cameras, LiDAR, and an HD-map prior into a unified ego-centric drivable BEV on nuScenes: lane prior + lift-splat camera road + LiDAR depth correction + uncertainty-weighted fusion | Camera·LiDAR·map fusion, per-cell confidence weighting, single Colab T4 |
+| 2 | [**CoT-VLA -- Chain-of-Thought VLA**](https://github.com/VasuTammisetti/CoT-Chain-of-thought-_VLA_ADAS) | Reason-before-act driving agent on nuScenes: 3D detection -> LLaVA chain-of-thought reasoning -> trained trajectory head -> safety & longitudinal control scoring | Trajectory ADE ~2.9m, ~82% steering accuracy, LLaVA-1.6 4-bit + SigLIP action head |
+| 3 | [**VLM-LiDAR-Camera ADAS**](https://github.com/VasuTammisetti/VLM-LiDAR-Camera-ADAS-perception) | Zero-shot scene understanding using LLaVA with Camera-LiDAR depth fusion on KITTI | Zero annotations, 4-bit quantized, Docker + Jenkins CI/CD |
+| 4 | [**Multi-Modal 3D Detection**](https://github.com/VasuTammisetti/Multi-Modal_3D_Object_Detection_from_KITTI_Augmenting_LiDAR_with_Camera_Semantics) | LiDAR + Camera late fusion for 3D object detection with BEV visualization | YOLOv8 + PointPillars, Pure PyTorch, KITTI benchmark |
+| 5 | [**LiDAR-Camera Depth Fusion**](https://github.com/VasuTammisetti/LiDAR_Camera-MiDAS-_Fusion_For-Better_Deapth-Map) | Dense metric depth via MiDaS + LiDAR median scaling | Sparse-to-dense, Metric-accurate, Real-time |
+| 6 | [**Meta-YOLOv8 Traffic Detection**](https://github.com/VasuTammisetti/Meta-Learning-Enhanced-YOLOv8-for-Precision-Traffic-Light-Color-Detection-in-ADAS) | Meta-learning enhanced YOLOv8 for traffic light detection | 89% mAP, Few-shot adaptive, Published research |
+| 7 | [**ROS2 Docker CV**](https://github.com/VasuTammisetti/ROS2_Docker_CV) | Containerized computer vision pipeline in ROS2 | Production-ready, Docker orchestrated |
+| 8 | [**Meta ML Deployment**](https://github.com/VasuTammisetti/Meta_ML_model_deployment_using_pycaret) | Meta-learning model deployment pipeline using PyCaret | AutoML, End-to-end MLOps |
+| 9 | [**Python AI Agent**](https://github.com/VasuTammisetti/PythonAIAgent) | Agentic AI pipeline with LangChain and RAG | LangChain, RAG, Autonomous agents |
 
 ## Spotlight: Chain-of-Thought VLA for Autonomous Driving
 
