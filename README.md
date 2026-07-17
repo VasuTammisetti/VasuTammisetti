@@ -32,7 +32,7 @@
 | **Role** | AI Research Engineer & Doctoral Researcher |
 | **Company** | Infineon Technologies AG, Munich, Germany |
 | **PhD** | Meta-Learning for ADAS Perception @ University of Granada |
-| **Experience** | 8+ years in AI/ML & Computer Vision |
+| **Experience** | 9 years in AI/ML & Computer Vision |
 | **Publications** | 3 peer-reviewed (MDPI Applied Sciences & Electronics, 2024) |
 | **Focus** | Sensor Fusion, 3D Detection, Meta-Learning, ADAS, Edge AI, VLMs, Vision-Language-Action (VLA) |
 | **Models** | Meta-YOLO v8-v11, PointPillars, LLaVA, SigLIP, Meta-DETR, DINOv2, BEVFusion |
